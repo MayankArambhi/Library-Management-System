@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    background:radial-gradient(#000420)
+}
+
+h1, #content {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+    transition: 0.3s ease;
+    background: #082d2a;
+}
+
+.nav {
+    padding: 8px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 18px;
+    color: #ffffff;
+    background: linear-gradient(#121212,#0d1c26);
+}
+
+#nav {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display:table;
+    border-radius: 20px;
+    border: 1px solid #1d8b50;
+}
+
+#selected {
+    border: 3px solid #1d8b50;
+}
+
+#header {
+    background: linear-gradient(#0d1c26,#121212);
+}
+
+form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#submit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    background: repeating-linear-gradient(#121212,#0d1c26);
+    border: 1px solid #1d8b50;
+}
+
+input:hover {
+    transition: 0.3s ease;
+    background: #082d2a;
+}
+
+#ip {
+    padding-right: 5px;
+    margin-right: 0px;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    border-right: 0px;
+}
+
+#sub {
+    padding-left: 8px;
+    margin-left: 0px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-left: 0px;
+}
+
+#content {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.table-wrapper{
+    overflow-x:auto;
+}
+
+table {
+    margin-top: 50px;
+    background: repeating-radial-gradient(#16091b, #00080f);
+    border: 3px solid #1d8b50;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+}
+th {
+    padding: 10px;
+    background: linear-gradient(#121212,#0d1c26);
+    border: 2px solid #1d8b50;
+}
+
+tr:hover {
+    transition: 0.3s ease;
+    background: #082d2a;
+    border: 1px solid #1d8b50;
+}
+
+td {
+    border: 1px solid #1d8b50;
+    padding: 10px;
+}

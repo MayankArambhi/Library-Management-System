@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library of Steady-Apple</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>Library of Steady-Apple</h1>
+    </div>
+    <div style="height:1px; background-color: #1d8b50;"></div>
+    <div id="nav">
+        <button id="selected" class="nav" style="border-top-right-radius: 0; border-bottom-right-radius: 0;">Bookshelf</button>
+        <button class="nav" style="border-radius: 0;">Manage</button>
+        <button class="nav" style="border-top-left-radius: 0; border-bottom-left-radius: 0;">About</button>
+    </div>
+    
+    <div id="content">
+
+        <form method="POST" action="/" id="user-form">
+            <div id="radio">
+                <input type="radio" name="rb" value="borrow">
+                <label for="b_isbn">Borrow Book</label>
+                <input type="radio" name="rb" value="return">
+                <label for="r_isbn">Return Book</label>
+            </div>
+            <div id="submit">
+                <input id="ip" type="text" name="isbn" placeholder="Enter ISBN code..."><input id="sub" type="submit" value="Submit"><p>{{ update }}</p>
+            </div>
+        </form>
+            <div class="table-wrapper">
+            <table border="0" id="book-data-table">
+                <tr>
+                    <th style="border-top-left-radius: 23px;">Book Title</th>
+                    <th>Author</th>
+                    <th>Year of Publication</th>
+                    <th>Readers</th>
+                    <th>ISBN Code</th>
+                    <th style="border-top-right-radius: 23px;">Available</th>
+                </tr>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row['Title'] }}</td>
+                    <td>{{ row['Author'] }}</td>
+                    <td>{{ row['Year'] }}</td>
+                    <td>{{ row['Popularity'] }}</td>
+                    <td>{{ row['ISBN Code'].strip('*') }}</td>
+                    {% if row['Available']=='Yes' %}
+                    <td style="color: rgb(139, 255, 176);">{{ row['Available'] }}</td>
+                    {% else %}
+                    <td style="color: rgb(255, 149, 151);">{{ row['Available'] }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
