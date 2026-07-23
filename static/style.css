@@ -5,7 +5,6 @@ body {
 
 h1, #content {
     margin: 0;
-    padding: 10px;
     text-align: center;
     color: #ffffff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -27,7 +26,7 @@ button:hover {
 
 #nav {
     max-width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -42,20 +41,26 @@ button:hover {
 
 #header {
     background: linear-gradient(#0d1c26,#121212);
+    padding: 10px;
 }
 
 form {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border: 1px solid #1d8b50;
+    border-radius: 20px;
+    background: repeating-linear-gradient(to right, #0c050f, #00080f);
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
+
+
 #submit {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 input {
+    margin: 10px;
     padding: 8px;
     color: #ffffff;
     font-size: 15px;
@@ -81,7 +86,23 @@ input:hover {
     margin-left: 0px;
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
-    border-left: 0px;
+}
+
+#list {
+    margin: 10px;
+}
+
+.list-input {
+    width: 350px;
+    margin: 10px;
+    border-radius: 22px;
+}
+
+#list-sub {
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 22px;
 }
 
 #content {

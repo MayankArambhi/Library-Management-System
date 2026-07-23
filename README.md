@@ -12,11 +12,9 @@ I've tried to keep the UI minimal and modern.
 
 The app is currently unfinished, the finished version will have:
 
-- A manage page for manager, allows to list/delist a book.
-
 - Authorization page to keep log of users and managers.
 
-- About page with a brief of the web-app.
+- About page with a brief about the web-app.
 
 ## Tech-Stack
 
@@ -44,4 +42,5 @@ python -m app.py
 Open http://127.0.0.1:5000 in the browser.
 
 ## Screenshots
-![Main UI](data/screenshots/image.png)
+![Main UI](data/screenshots/bookshelf.png)
+![Main UI](data/screenshots/manage.png)
