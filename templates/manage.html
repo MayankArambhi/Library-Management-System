@@ -12,22 +12,32 @@
     </div>
     <div style="height:1px; background-color: #1d8b50;"></div>
     <div id="nav">
-        <button id="selected" class="nav" style="border-top-right-radius: 0; border-bottom-right-radius: 0;">Bookshelf</button>
-        <a href="/manage"><button class="nav" style="border-radius: 0;">Manage</button></a>
-        <button class="nav" style="margin-right:2px;border-top-left-radius: 0; border-bottom-left-radius: 0;">About</button>
+        <a href="/"><button class="nav" style="margin-left: 2px; border-top-right-radius: 0; border-bottom-right-radius: 0;">Bookshelf</button></a>
+        <button id="selected" class="nav" style="border-radius: 0;">Manage</button>
+        <button class="nav" style="margin-right: 2px; border-top-left-radius: 0; border-bottom-left-radius: 0;">About</button>
     </div>
+    
     <div id="content">
         <div style="height:1px; background-color: #1d8b50;"></div>
         <p style="text-align: center;">{{ update }}</p>
-        <form method="POST" action="/" id="user-form">
-            <div id="radio">
-                <input type="radio" name="rb" value="borrow">
-                <label for="b_isbn">Borrow Book</label>
-                <input type="radio" name="rb" value="return">
-                <label for="r_isbn">Return Book</label>
-            </div>
+        <form method="POST" action="/manage" id="user-form">
             <div id="submit">
-                <input id="ip" type="text" name="isbn" placeholder="Enter ISBN code..." requred><input id="sub" type="submit" value="Submit">
+                <p>De-list Books</p>
+                <input id="ip" type="text" name="isbn" placeholder="Enter ISBN code..."><input id="sub" type="submit" name="form-type" value="De-list">
+            </div>
+        </form>
+        <form method="POST" action="/manage" id="manager-form">
+            <div id="list">
+                <p>List books</p>
+                <input class="list-input" type="text" name="title" placeholder="Enter Title...">
+                <br>
+                <input class="list-input" type="text" name="author" placeholder="Enter Author name...">
+                <br>
+                <input class="list-input" type="text" name="year" placeholder="Enter Year of publication...">
+                <br>
+                <input class="list-input" type="text" name="isbn" placeholder="Enter ISBN code...">
+                <br>
+                <input id="list-sub" type="submit" name="form-type" value="List">
             </div>
         </form>
         <div style="height:1px; background-color: #1d8b50;"></div>
